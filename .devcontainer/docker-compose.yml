@@ -1,0 +1,16 @@
+services:
+    pymain:
+        image: mcr.microsoft.com/vscode/devcontainers/base:bullseye
+        init: true
+        tty: true
+        cap_add:
+            - IPC_LOCK
+        volumes:
+            - ..:/workspace:cached
+        networks:
+            - pymain
+
+networks:
+    pymain:
+        driver: bridge
+        enable_ipv6: false

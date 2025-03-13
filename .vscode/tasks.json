@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "[Flask] run",
+            "type": "shell",
+            "command": "gunicorn -w 4 teikei_crm:app --bind 0.0.0.0:8001 --reload --pid gunicorn.pid",
+            "options": {
+                "cwd": "${workspaceFolder}/alliance-cosmo"
+            },
+            "problemMatcher": [],
+            "dependsOn": ["Stop gunicorn"],
+            "isBackground": false
+        },
+        {
+            "label": "Stop gunicorn",
+            "type": "shell",
+            "command": "sh -c '[ -f gunicorn.pid ] && kill $(cat gunicorn.pid) && rm -f gunicorn.pid || true'",
+            "options": {
+                "cwd": "${workspaceFolder}/alliance-cosmo"
+            },
+            "problemMatcher": []
+        }
+    ]
+}
