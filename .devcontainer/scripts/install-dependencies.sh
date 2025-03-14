@@ -15,4 +15,7 @@ sudo apt install -y default-mysql-client vim tig libpango1.0-0 \
     zlib1g-dev \
     shared-mime-info && pip install --no-cache-dir -r requirements.txt
 
+# Timezone --> Asia/Tokyo
+sudo ln -sf  /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
+
 echo "pip installed successfully"
