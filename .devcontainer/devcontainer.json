@@ -22,7 +22,9 @@
                 "rssowl.copy-relative-path-posix",
                 "bradlc.vscode-tailwindcss",
                 "ms-python.flake8",
-                "github.vscode-github-actions"
+                "github.vscode-github-actions",
+                "eamodio.gitlens",
+                "mhutchie.git-graph"
             ],
             "settings": {
                 "editor.formatOnPaste": true,
